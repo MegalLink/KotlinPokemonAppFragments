@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="primary">#6200EE</color>
+    <color name="primaryDark">#3700B3</color>
+    <color name="accent">#03DAC5</color>
+
+    <color name="text_black">#111111</color>
+    <color name="text_gray">#4C5957</color>
+    <color name="hp_bg">#B8AF5B</color>
+    <color name="defense_bg">#AFCDF3</color>
+    <color name="speed_bg">#F3DB03</color>
+    <color name="attack_bg">#8F8101</color>
 </resources>
