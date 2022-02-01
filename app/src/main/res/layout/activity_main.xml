@@ -9,14 +9,14 @@
         android:name="com.example.pokemonapp.DetailFragment"
         android:id="@+id/detail_fragment"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
         />
+
     <fragment
-        android:name="com.example.pokemonapp.ListFragment"
         android:id="@+id/list_fragment"
+        android:name="com.example.pokemonapp.ListFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/detail_fragment"
-        android:layout_alignParentBottom="true"
-        />
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>
