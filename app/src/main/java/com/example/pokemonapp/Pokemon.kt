@@ -7,5 +7,6 @@ data class Pokemon(
     val attack: Int,
     val defense: Int,
     val speed: Int,
-    val type:PokemonType
+    val type:PokemonType,
+    val url: String,
 )

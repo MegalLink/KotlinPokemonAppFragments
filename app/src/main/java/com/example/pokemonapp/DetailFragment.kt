@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -41,6 +42,7 @@ class DetailFragment : Fragment() {
     }
 
     fun setPokemonData(pokemon: Pokemon){
+        Glide.with(this).load(pokemon.url).into(imageView);
         hpText.text = getString(R.string.hp_format,pokemon.hp)
         attackText.text=getString(R.string.attack_format,pokemon.attack)
         defenseText.text=getString(R.string.defense_format,pokemon.defense)

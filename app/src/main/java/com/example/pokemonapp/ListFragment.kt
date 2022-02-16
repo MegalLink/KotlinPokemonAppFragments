@@ -59,16 +59,18 @@ class ListFragment : Fragment() {
                 attack = 100,
                 defense = 200,
                 speed = 200,
-                PokemonType.ELECTRIC
+                PokemonType.ELECTRIC,
+                url = "https://wallpaperaccess.com/full/201914.jpg"
             ),
             Pokemon(
                 id = 2,
-                name = "Raichu",
+                name = "Bulbasaur",
                 hp = 400,
                 attack = 200,
                 defense = 100,
                 speed = 100,
-                PokemonType.ELECTRIC
+                PokemonType.GRASS,
+                url = "http://pm1.narvii.com/7626/2dab04d59531d3d1399cccf3516046f6cb08e26br1-1200-776v2_uhq.jpg"
             ),
             Pokemon(
                 id = 3,
@@ -77,7 +79,8 @@ class ListFragment : Fragment() {
                 attack = 100,
                 defense = 200,
                 speed = 200,
-                PokemonType.FIRE
+                PokemonType.FIRE,
+                url = "https://i.pinimg.com/originals/c0/a2/43/c0a2435578dcf6e6b84aaa272548d8f6.jpg"
             ),
             Pokemon(
                 id = 4,
@@ -86,7 +89,8 @@ class ListFragment : Fragment() {
                 attack = 100,
                 defense = 200,
                 speed = 200,
-                PokemonType.FIGHTER
+                PokemonType.FIGHTER,
+                url = "https://sooluciona.com/wp-content/uploads/2018/09/Machoke.jpg"
             ),
             Pokemon(
                 id = 5,
@@ -95,37 +99,19 @@ class ListFragment : Fragment() {
                 attack = 100,
                 defense = 200,
                 speed = 200,
-                PokemonType.WATER
+                PokemonType.WATER,
+                url = "https://www.tonica.la/__export/1610402225188/sites/debate/img/2021/01/11/squirtle-vistos-como-varios-tipos-de-pokxmon.jpg_1902800913.jpg"
             )
             ,
             Pokemon(
                 id = 6,
-                name = "Squirtle",
+                name = "Charmander",
                 hp = 200,
                 attack = 100,
                 defense = 200,
                 speed = 200,
-                PokemonType.WATER
-            )
-            ,
-            Pokemon(
-                id = 7,
-                name = "Squirtle",
-                hp = 200,
-                attack = 100,
-                defense = 200,
-                speed = 200,
-                PokemonType.WATER
-            )
-            ,
-            Pokemon(
-                id = 8,
-                name = "Squirtle",
-                hp = 200,
-                attack = 100,
-                defense = 200,
-                speed = 200,
-                PokemonType.WATER
+                PokemonType.FIRE,
+                url="https://cdn.custom-cursor.com/cursors/pokemon_charmander__and_charizard_893.png",
             )
         )
         adapter.submitList(pokemonList)
