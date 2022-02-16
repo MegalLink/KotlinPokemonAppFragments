@@ -6,13 +6,16 @@ import android.util.Log
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity(),ListFragment.PokemonSelectListener {
+    private lateinit var detailFragment: DetailFragment
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //Get Fragment by id
+        detailFragment = supportFragmentManager.findFragmentById(R.id.detail_fragment) as DetailFragment
     }
 
     override fun onPokemonSelected(pokemon: Pokemon) {
-         Toast.makeText(this,"Pokemon:${pokemon.name}",Toast.LENGTH_SHORT).show()
+        detailFragment.setPokemonData(pokemon)
     }
 
 }

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">PokemonApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="hp_format">Hp: %d</string>
+    <string name="attack_format">Hp: %d</string>
+    <string name="defense_format">Hp: %d</string>
+    <string name="speed_format">Hp: %d</string>
 </resources>
