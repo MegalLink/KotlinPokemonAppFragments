@@ -1,5 +1,6 @@
 package com.example.pokemonapp
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.lang.ClassCastException
 
 /**
  * A simple [Fragment] subclass.
@@ -15,6 +17,25 @@ import androidx.recyclerview.widget.RecyclerView
  * create an instance of this fragment.
  */
 class ListFragment : Fragment() {
+
+    interface PokemonSelectListener{
+        fun onPokemonSelected(pokemon:Pokemon)
+    }
+
+    private lateinit var pokemonSelectLister:PokemonSelectListener
+
+    //Primer metodo que se ejecuta cuando se llama al fragment
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        //El activity que implemente este fragment debe implementar a fuerza PokemonSelectListener
+        pokemonSelectLister= try{
+            context as PokemonSelectListener
+        }catch (e:ClassCastException){
+            throw ClassCastException("$context must implement PokemonSelectListener")
+        }
+
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,10 +48,10 @@ class ListFragment : Fragment() {
         val adapter = PokemonAdapter()
         recycler.adapter = adapter
         adapter.onItemClickListener = {
-            Toast.makeText(requireActivity(),it.name,Toast.LENGTH_LONG)
+            pokemonSelectLister.onPokemonSelected(it)
         }
 
-        val pokemonList = mutableListOf<Pokemon>(
+        val pokemonList = mutableListOf(
             Pokemon(
                 id = 1,
                 name = "Pikachu",
